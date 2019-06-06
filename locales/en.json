@@ -1,0 +1,20 @@
+{
+  "name": "Vargha Sabolch",
+  "menu": {
+    "home": "Home",
+    "projects": "Projects",
+    "blog": "Blog",
+    "about": "About",
+    "contact": "Contact"
+  },
+  "btn": {
+    "website": "I need a website",
+    "hire": "I`m looking to hire",
+    "send": "Send"
+  },
+
+  "index": {
+    "title": "Hi, I`m Sabolch, web developer & programmer.",
+    "subtitle": "Backend / Frontend / Web Apps"
+  }
+}

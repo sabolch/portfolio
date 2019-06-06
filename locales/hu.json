@@ -1,0 +1,20 @@
+{
+   "name": "Varga Szabolcs",
+  "menu": {
+    "home": "Főoldal",
+    "projects": "Projektek",
+    "blog": "Blog",
+    "about": "Rólam",
+    "contact": "Kapcsolat"
+  },
+  "btn": {
+    "website": "I need a website",
+    "hire": "I`m looking to hire",
+    "send": "Send"
+  },
+
+  "index": {
+    "title": "Hi, I`m Sabolch, web developer & programmer.",
+    "subtitle": "Backend / Frontend / Web Apps"
+  }
+}

@@ -1,0 +1,63 @@
+@keyframes bounce-in {
+    0% { transform: scale(0) }
+    50% { transform: scale(1.5) }
+    100% { transform: scale(1) }
+}
+@keyframes bounce-out {
+    0% { transform: scale(1) }
+    50% { transform: scale(1.5) }
+    100% { transform: scale(0) }
+}
+
+.page-enter-active, .page-leave-active {
+    transition: all 0.4s;
+    /*animation: bounce-in .5s;*/
+}
+.page-enter, .page-leave-active {
+    opacity: 0;
+    transform: scale(0);
+    /*animation: bounce-out .4s;*/
+}
+.img-center{
+    margin: 0 auto;
+}
+
+
+/*** Flags ****/
+
+.flag-icon-background {
+    background-size: contain;
+    background-position: 50%;
+    background-repeat: no-repeat;
+}
+.flag-icon {
+    background-size: contain;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    position: relative;
+    display: inline-block;
+    width: 1.33333333em;
+    line-height: 1em;
+}
+.flag-icon:before {
+    content: "\00a0";
+}
+.flag-icon{
+    width: 1em;
+}
+
+.flag-icon-en {
+    background-image: url(flags/gb.svg);
+}
+
+.flag-icon-hu {
+    background-image: url(flags/hu.svg);
+}
+
+.flag-icon-ua {
+    background-image: url(flags/ua.svg);
+}
+.flag-language{
+    font-size: 30px;
+}
+

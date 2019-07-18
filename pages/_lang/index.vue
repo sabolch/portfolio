@@ -18,6 +18,8 @@
       large
       outline
       color="primary"
+      :href="gDocsUrl"
+      target="_blank"
       >{{$t('btn.website')}}</v-btn>
             <v-btn
       outline
@@ -39,8 +41,10 @@ export default {
 
       }
     },
-    mounted() {
-      console.log(this.$vuetify.breakpoint.xs)
+    computed:{
+      gDocsUrl(){
+          return process.env.G_DOCS_URL
+      }
     }
 }
 </script>

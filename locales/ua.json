@@ -1,20 +1,34 @@
 {
-  "name": "Vargha Sabolch",
+  "name": "Варга Саболч",
+  "languages": "Мова",
+
   "menu": {
-    "home": "Home",
-    "projects": "Projects",
-    "blog": "blog",
-    "about": "about",
-    "contact": "contact"
+    "home": "Головне",
+    "projects": "Проєкти",
+    "blog": "Блог",
+    "about": "Про мене",
+    "contact": "Контакти"
   },
   "btn": {
-    "website": "I need a website",
-    "hire": "I`m looking to hire",
-    "send": "Send"
+    "website": "Мені потрібен веб-сайт",
+    "hire": "Я шукаю найняти",
+    "send": "Надіслати",
+    "home": "Головне"
   },
 
   "index": {
-    "title": "Hi, I`m Sabolch, web developer & programmer.",
-    "subtitle": "Backend / Frontend / Web apps"
+    "title": "Привіт, я Саболч, веб-розробник і розробник програмного забезпечення.",
+    "subtitle": "Backend / Frontend / Web Apps"
+  },
+  "about": {
+    "skills": "Навички",
+    "techs": "Я не боюся",
+    "text": [
+      "Hi there, my name is Sabolch Vargha and I work freelance in Uzghorod, Ukraine. I am a Web Developer and I specialize in creating websites. For the past 2 years, I've been developing applications for the web using mostly PHP. I do this for a living and love what I do as every day there is something new and exciting to learn.",
+      "Coding have been my passion since the days I started working with computers but I found myself into programing since 2014. I enjoy creating beautifully designed, intuitive and functional websites."
+    ]
+  },
+  "error": {
+    "title": "На жаль, сторінка не знайдена .."
   }
 }

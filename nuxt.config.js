@@ -1,14 +1,13 @@
+// import plugins
 import VuetifyLoaderPlugin from 'vuetify-loader/lib/plugin'
 import pkg from './package'
 
+// .env variables
+const env = require('dotenv').config()
+
 export default {
   mode: 'universal',
-
-  env:{
-    apiUrl: 'http://localhost:8000',
-    appName: 'Vargha Sabolch',
-    appLocale: 'en',
-  },
+  env:env.parsed,
 
   /*
   ** Headers of the page
@@ -59,10 +58,11 @@ export default {
   ** Nuxt.js modules
   */
  modules: [
+  //  ['@nuxtjs/dotenv'],
    ['@nuxtjs/recaptcha', {
      /* reCAPTCHA options */
      hideBadge: true,
-     siteKey: '6Ld8hacUAAAAAEURk4TcbZhfWQn2sQabwkupF08s',
+     siteKey: process.env.RECAPTCHA_API_KEY,
      version: 3
    }],
   [
@@ -73,36 +73,40 @@ export default {
       functionsLocation: 'us-central1',
       config: {
         development: {
-          apiKey: "AIzaSyAUVvGTXU6leGWe9oKUDobzQELJaDfM1r0",
-          authDomain: "vportfolio-3209d.firebaseapp.com",
-          databaseURL: "https://vportfolio-3209d.firebaseio.com",
-          projectId: "vportfolio-3209d",
-          storageBucket: "vportfolio-3209d.appspot.com",
-          messagingSenderId: "683716865547",
+          apiKey: process.env.FIREBASE_API_KEY,
+          authDomain: process.env.FIREBASE_DOMAIN,
+          databaseURL: process.env.FIREBASE_URL,
+          projectId: process.env.FIREBASE_PROJECT_ID,
+          storageBucket: process.env.FIREBASE_STORAGE_BUCKET,
+          messagingSenderId: process.env.FIREBASE_MESSAGING_SENDER_ID
         },
+
         production: {
-          apiKey: "AIzaSyAUVvGTXU6leGWe9oKUDobzQELJaDfM1r0",
-          authDomain: "vportfolio-3209d.firebaseapp.com",
-          databaseURL: "https://vportfolio-3209d.firebaseio.com",
-          projectId: "vportfolio-3209d",
-          storageBucket: "vportfolio-3209d.appspot.com",
-          messagingSenderId: "683716865547",
+          apiKey: process.env.FIREBASE_API_KEY,
+          authDomain: process.env.FIREBASE_DOMAIN,
+          databaseURL: process.env.FIREBASE_URL,
+          projectId: process.env.FIREBASE_PROJECT_ID,
+          storageBucket: process.env.FIREBASE_STORAGE_BUCKET,
+          messagingSenderId: process.env.FIREBASE_MESSAGING_SENDER_ID
         }
       }
     }
   ]
 ],
 
+  // multilanguage support in router
   router: {
     middleware: 'i18n'
   },
+
   generate: {
-    routes: ['/', '/about', '/fr', '/fr/about']
+    routes: ['/', '/about', '/hu', '/hu/about','/ua','/ua/about']
   },
 
   /*
   ** Build configuration
   */
+
   build: {
     transpile: [/^vue2-google-maps($|\/)/,'vuetify/lib'],
     plugins: [new VuetifyLoaderPlugin()],
@@ -114,7 +118,11 @@ export default {
     /*
     ** You can extend webpack config here
     */
-    extend(config, ctx) {
+   // Debug options
+   extend(config, ctx) {
+    if (ctx.isDev) {
+      config.devtool = ctx.isClient ? 'source-map' : 'inline-source-map'
     }
+  }
   }
 }

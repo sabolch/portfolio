@@ -1,20 +1,51 @@
 {
-  "name": "Vargha Sabolch",
+  "name": "Sabolch Vargha",
+  "languages": "Languages",
   "menu": {
     "home": "Home",
     "projects": "Projects",
     "blog": "Blog",
-    "about": "About",
+    "about": "About me",
     "contact": "Contact"
   },
   "btn": {
     "website": "I need a website",
     "hire": "I`m looking to hire",
-    "send": "Send"
+    "send": "Send",
+    "home": "Go to home",
+    "close": "Close"
   },
 
   "index": {
-    "title": "Hi, I`m Sabolch, web developer & programmer.",
+    "title": "Hi, I`m Sabolch, web developer & software engineer.",
     "subtitle": "Backend / Frontend / Web Apps"
+  },
+  "about": {
+    "skills": "Skills",
+    "techs": "I`m not scared of",
+    "text": [
+      "Hi there, my name is Sabolch Vargha, and I’m currently looking for a job. I have a bachelor’s degree in software engineering. At the moment I am working freelance in Uzghorod, Ukraine. I am a Web Developer and I specialize in creating websites. For the past 2 years, I've been developing applications for the web using mostly PHP. I do this for a living and love what I do as every day there is something new and exciting to learn.",
+      "Coding have been my passion since the days I started working with computers but I found myself into programing since 2014. I enjoy creating beautifully designed, intuitive and functional websites. Aside from web development, I enjoy spending my time in nature. Thank you for reading until the end ;)",
+      "Have a nice day!"
+    ]
+  },
+  "contact": {
+    "title": "Contact me",
+    "subtitle": "If you have any questions please don't hesitate to contact me ..",
+    "form": {
+      "name": "Name",
+      "subject": "Subject",
+      "email": "E-mail",
+      "message": "Message"
+    }
+  },
+
+  "error": {
+    "title": "Oops page not found .."
+  },
+
+  "snackbar": {
+    "success": "Successfully sent ..",
+    "error": "Something goes wrong :("
   }
 }

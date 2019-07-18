@@ -1,5 +1,6 @@
 {
    "name": "Varga Szabolcs",
+  "languages": "Nyelvek",
   "menu": {
     "home": "Főoldal",
     "projects": "Projektek",
@@ -8,13 +9,36 @@
     "contact": "Kapcsolat"
   },
   "btn": {
-    "website": "I need a website",
-    "hire": "I`m looking to hire",
-    "send": "Send"
+    "website": "Weboldalt szeretnék",
+    "hire": "Alkalmazni szeretnék",
+    "send": "Elküld",
+    "home": "Főoldal",
+    "close": "Bezár"
   },
-
   "index": {
-    "title": "Hi, I`m Sabolch, web developer & programmer.",
+    "title": "Üdv, Szabolcs vagyok, webfejlesztő és szoftvermérnök.",
     "subtitle": "Backend / Frontend / Web Apps"
+  },
+  "about": {
+    "skills": "Tapasztalataim",
+    "techs": "Nem ilyedek meg, ha ezekkel találkozom",
+    "text": [
+      "Szia, Varga Szabolcs vagyok, szabadúszóként dolgozom Ungváron, Ukrajnában. Szoftverfejlesztő mérnökként végeztem, és web fejlesztésre szakosodtam. Az elmúlt 2 évben feljesztek alkalmazásokat a webre főleg PHP-val.",
+      "Régóta foglalkozom számítógépekkel, a kódolás a szenvedélyem, de komolyabban 2014-től kezdtem el programozni. Számomra élvezet a szépen kialakított, intuitív funkcionalitással rendelkező weboldalak készítése, és az már csak hab a tortán, ha ezzel valamilyen új izgalmas ismeretekre tehetek szert. Köszönöm látogatásodat.",
+      "Legyen szép napod!"
+    ]
+  },
+  "contact": {
+    "title": "Kapcsolat",
+    "subtitle": "Ha bármilyen kérdése van, kérem ne habozzon kapcsolatba lépni velem ..",
+    "form": {
+      "name": "Név",
+      "subject": "Tárgy",
+      "email": "E-mail",
+      "message": "Üzenet"
+    }
+  },
+  "error": {
+    "title": "Hoppá az oldal nem található .."
   }
 }

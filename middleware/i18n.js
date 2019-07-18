@@ -1,4 +1,5 @@
 export default function ({ isHMR, app, store, route, params, req, error, redirect }) {
+
   if (isHMR) { // ignore if called from hot module replacement
     return;
   }

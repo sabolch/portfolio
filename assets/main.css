@@ -10,7 +10,7 @@
 }
 
 .page-enter-active, .page-leave-active {
-    transition: all 0.4s;
+    transition: all 0.2s;
     /*animation: bounce-in .5s;*/
 }
 .page-enter, .page-leave-active {
@@ -21,8 +21,6 @@
 .img-center{
     margin: 0 auto;
 }
-
-
 /*** Flags ****/
 
 .flag-icon-background {
@@ -45,19 +43,19 @@
 .flag-icon{
     width: 1em;
 }
-
 .flag-icon-en {
     background-image: url(flags/gb.svg);
 }
-
 .flag-icon-hu {
     background-image: url(flags/hu.svg);
 }
-
 .flag-icon-ua {
     background-image: url(flags/ua.svg);
 }
 .flag-language{
-    font-size: 30px;
+    font-size: 30px !important;
 }
-
+.about-text{
+    text-indent: 1.5em;
+    line-height: 1.6 !important;
+}

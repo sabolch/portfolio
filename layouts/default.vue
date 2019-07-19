@@ -154,9 +154,12 @@
         },
         methods: {
             setLocale(lang) {
+                // Lang = current lang
                 if (lang === this.$i18n.locale) return
+                // change language
+                this.$store.commit('SET_LANG', locale)
+                // this.$i18n.locale = lang
                 document.cookie = `locale=${lang}`;
-                location.reload()
             }
         }
     }

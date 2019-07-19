@@ -1,30 +1,23 @@
-export default function ({ isHMR, app, store, route, params, req, error, redirect }) {
-
-  if (isHMR) { // ignore if called from hot module replacement
-    return;
-  }
-
-  if (req) {
-    if (route.name) {
-      let locale = null;
-
-      // check if the locale cookie is set
-      if (req.headers.cookie) {
-        const cookies = req.headers.cookie.split('; ').map(stringCookie => stringCookie.split('='));
-        const cookie = cookies.find(cookie => cookie[0] === 'locale');
-
-        if (cookie) {
-          locale = cookie[1];
-        }
-      }
-
-      // if the locale cookie is not set, fallback to accept-language header
-      if (!locale) {
-        locale = req.headers['accept-language'].split(',')[0].toLocaleLowerCase().substring(0, 2);
-      }
-
-      store.commit('SET_LANG', locale);
-      app.i18n.locale = store.state.locale;
+export default function ({isHMR, app, store, route, params, error, redirect}) {
+    const defaultLocale = app.i18n.fallbackLocale
+    // If middleware is called from hot module replacement, ignore it
+    if (isHMR) {
+        return
     }
-  }
-};
+    // Get locale from params
+    const locale = params.lang || defaultLocale
+    if (!store.state.locales.includes(locale)) {
+        return error({message: 'This page could not be found.', statusCode: 404})
+    }
+    // Set locale
+    store.commit('SET_LANG', locale)
+    app.i18n.locale = store.state.locale
+    // If route is /<defaultLocale>/... -> redirect to /...
+    if (locale === defaultLocale && route.fullPath.indexOf('/' + defaultLocale) === 0) {
+        const toReplace = '^/' + defaultLocale + (route.fullPath.indexOf('/' + defaultLocale + '/') === 0 ? '/' : '')
+        const re = new RegExp(toReplace)
+        return redirect(
+            route.fullPath.replace(re, '/')
+        )
+    }
+}

@@ -19,7 +19,7 @@ export default {
             {name: 'viewport', content: 'width=device-width, initial-scale=1'},
             {name: 'mobile-web-app-capable', content: 'yes'},
             {hid: 'description', name: 'description', content: 'Vargha Sabolch portfolio page'},
-			{name: 'google-site-verification', content: 'vpDSwoiZLVd07OXTwgNpOvmEEIlCD0tl-GdMFoQgqf4'}
+            {name: 'google-site-verification', content: 'vpDSwoiZLVd07OXTwgNpOvmEEIlCD0tl-GdMFoQgqf4'}
         ],
         link: [
             {rel: 'icon', type: 'image/x-icon', href: '/monogram/monogram.ico'},
@@ -72,6 +72,11 @@ export default {
                 }
             }
         ],
+        ['@nuxtjs/google-analytics', {id: 'UA-131722076-2'}],
+        ['@nuxtjs/google-tag-manager', {
+            id: 'GTM-PSKN93M'
+        }],
+
         ['@nuxtjs/recaptcha', {
             /* reCAPTCHA options */
             hideBadge: true,

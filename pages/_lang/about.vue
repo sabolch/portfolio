@@ -5,7 +5,7 @@
                     size="200"
                     class="pb-4"
             >
-                <img src="/profile.jpg" alt="avatar">
+                <img src="/profile_256x256.jpg" alt="avatar">
             </v-avatar>
             <h1 v-for="(x,i) in $t('about.text')" :key="i" class="title text-xs-justify pa-2 green--text about-text">
               {{x}}
@@ -136,7 +136,7 @@
                     {value:85, color:'red',title:'MS SQL',img:'/skills/mssql.jpg'},
                     {value:85, color:'green',title:'MongoDB',img:'/skills/mongodb.png'},
                     {value:85, color:'primary',title:'Java',img:'/skills/java.png'},
-                    {value:85, color:'purple',title:'C#',img:'/skills/csharp.png'},
+                    {value:85, color:'purple',title:'C#',img:'/skills/csharp.jpg'},
                     {value:85, color:'yellow',title:'Python',img:'/skills/python.png'},
                     {value:85, color:'primary',title:'Three.js',img:'/skills/threejs.jpg'},
                 ]

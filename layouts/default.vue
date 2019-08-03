@@ -41,7 +41,7 @@
                                 v-for="item in $store.state.locales"
                                 :key="item"
                                 to=""
-                                @click="setLocale(item)"
+                                @click.prevent="setLocale(item)"
                         >
                             <v-list-tile-action>
                                 <v-icon class="flag-icon">{{ `flag-icon-${item}` }}</v-icon>
@@ -137,6 +137,7 @@
 
 <script>
     import UnderDev from "../components/under-dev";
+    import {replaceUrl} from '~/utils'
 
     export default {
         components: {UnderDev},
@@ -157,9 +158,9 @@
                 // Lang = current lang
                 if (lang === this.$i18n.locale) return
                 // change language
-                // this.$store.commit('SET_LANG', locale)
                 this.$i18n.locale = lang
-                // document.cookie = `locale=${lang}`;
+                this.$store.commit('SET_LANG', lang)
+                history.pushState({}, null, replaceUrl(this.$route.fullPath, lang));
             }
         }
     }

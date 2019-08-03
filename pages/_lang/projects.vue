@@ -23,7 +23,7 @@ export default {
         { title: "Three.js Aviator Game", img: "game.jpg", lazy_img: "game_lazy.jpg", git:'https://github.com/VarghaSabee/games-threejs' },
         { title: "Bus ticket", img: "autobase.jpg", lazy_img: "autobase_lazy.jpg", git:'https://github.com/VarghaSabee/autobase' },
         { title: "SabAds (Online Exchange)", img: "ads.jpg", lazy_img: "ads_lazy.jpg", git:'https://github.com/VarghaSabee/sabAds' },
-        { title: "Simple T-Shirt designer", img: "t-shirt.jpg", lazy_img: "t-shirt_lazy.jpg", git:'https://github.com/VarghaSabee/t-shirt_designer' }
+        { title: "Simple T-Shirt designer", img: "t_shirt.jpg", lazy_img: "t_shirt_lazy.jpg", git:'https://github.com/VarghaSabee/t-shirt_designer' }
       ]
 
     };

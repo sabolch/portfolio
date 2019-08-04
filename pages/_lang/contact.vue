@@ -227,7 +227,9 @@
                     name: '',
                     email: '',
                     subject: '',
-                    message: ''
+                    message: '',
+                    checked:false,
+                    date: new Date().toString()
                 },
                 nameRules: [
                     v => !!v || 'Name is required',
@@ -268,19 +270,27 @@
             async sendMessage() {
                 if (this.$refs.form.validate()) {
                     this.loading = true
-                    const messageRef = this.$fireStore.collection('message').doc('messages')
+                    const messageRef = this.$fireStore.collection('messages').doc(`message_${new Date().valueOf()}`)
                     await messageRef.set({
                         message: this.form
                     }).then(res => {
                         // success
-                        this.snackbar.color = 'success'
-                        this.snackbar.active = true
-                        this.snackbar.text = this.$t('snackbar.success')
+                        Object.assign(
+                            this.snackbar,
+                            {
+                                color: 'success',
+                                active: true,
+                                text: this.$t('snackbar.success')
+                            })
                     }).catch(e => {
                         // error
-                        this.snackbar.color = 'error'
-                        this.snackbar.active = true
-                        this.snackbar.text = this.$t('snackbar.error')
+                        Object.assign(
+                            this.snackbar,
+                            {
+                                color: 'error',
+                                active: true,
+                                text: this.$t('snackbar.error')
+                            })
                     }).then(res => {
                         // finally in Edge not work using .then()
                         this.$refs.form.reset()

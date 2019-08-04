@@ -23,7 +23,12 @@ export function cookieFromRequest(req, key) {
     }
 }
 
-
+/**
+ *
+ * @param url
+ * @param locale
+ * @returns {string}
+ */
 export function replaceUrl(url, locale) {
     let urlArray = url.split('/')
     locale = locale === 'en' ? '' : locale

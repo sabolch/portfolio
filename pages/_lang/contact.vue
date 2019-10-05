@@ -107,7 +107,7 @@
             {{ snackbar.text }}
             <v-btn
                     dark
-                    color="orange"
+                    color="white"
                     flat
                     @click="snackbar.active = false"
             >
